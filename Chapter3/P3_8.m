@@ -30,7 +30,7 @@ for k = 1:1:400
     set(gca, 'Ydir', 'reverse');
     xlabel('x');
     ylabel('z');
-    title('顶部为自由边界条件，其他为透射边界的二维声波传播快照');
+    title('Wavefield Snapshot');
     % set(gcf, 'doublebuffer', 'on'); % eliminate the vibration
     f = getframe(gcf);
     imind = frame2im(f);
@@ -41,3 +41,5 @@ for k = 1:1:400
         imwrite(imind, cm, filename, 'gif', 'WriteMode', 'append', 'DelayTime', 0.1);
     end
 end
+
+
