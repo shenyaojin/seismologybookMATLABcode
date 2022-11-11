@@ -20,4 +20,5 @@ a part of MATLAB code in Introduction to Seismology by Wan Yongge
 ### 其他 / other
 MATLAB本身没有自动补全，以及启动较慢，推荐使用（我自己在用）VsCode写代码，配置教程百度“vscode matlab”即可。
 
+> 可以用Octave, 悲
 之后计划更新本书习题的解答
