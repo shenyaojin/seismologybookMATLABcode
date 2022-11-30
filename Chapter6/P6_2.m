@@ -1,9 +1,9 @@
 %p6_2.m
-v10=2;v20=3;H1=4;  %速度从地表2km/s到4km深度处的3km/s，层厚为4km,每公里增加0.25km/s 
+v10=2;v20=3;H1=4;  % The speed is from 2km/s on the surface to 3km/s at a depth of 4km, and the layer thickness is 4km, increasing by 0.25km/s per kilometer
 b1=(v20-v10)/H1;
-v11=v20;v21=5;H2=2;  %速度从3km/s到5km/s,每公里速度增加1km/s，该层为速度陡变带
+v11=v20;v21=5;H2=2;  % The speed is from 3km/s to 5km/s, and the speed increases by 1km/s per kilometer. This layer is a speed-changing zone
 b2=(v21-v11)/H2;
-v12=v21;v22=8;H3=12;  %速度从5km/s到8km/s,每公里速度增加0.25km/s
+v12=v21;v22=8;H3=12;  % The speed is from 5km/s to 8km/s, and the speed per kilometer increases by 0.25km/s
 b3=(v22-v12)/H3;
 x=[0,60];
 v=[];
@@ -17,12 +17,12 @@ elseif(z>(H2+H1)&z<=(H1+H2+H3))
 end
 end
 figure(1)
-pcolor(x,[0:15],v);   %绘制速度分布
+pcolor(x,[0:15],v);   %plot the valocity distribution
 fig1=gca;
-shading interp
+shading interp % using interpolation to make the shade looking better
 colorbar
-annotation('textbox',[0.80,0.894,0.5,0.1],'linestyle','none','String','速度/km.s^-^1') 
-%在色标上加上标记
+annotation('textbox',[0.80,0.894,0.5,0.1],'linestyle','none','String','velocity/km.s^-^1') 
+% Add mark to the colorbar
 hold on
 h=0.1;
 xall0=0;tall0=0;p0=0.5;
